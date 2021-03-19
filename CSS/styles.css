@@ -66,8 +66,8 @@ body {
 
 /* Цвет контура при фокусе заменен на акцентный цвет для поддержания стилистики сайта) */
 /* :focus {
-  outline-color: var(--accent-color) */
-/* } */
+  outline-color: var(--accent-color);
+} */
 
 /* ================COMPONENTS============= */
 .logo {
@@ -299,6 +299,26 @@ body {
   justify-content: space-between;
 }
 
+.we-do_item {
+  position: relative;
+}
+
+.we-do_decription {
+  position: absolute;
+  width: 370px;
+  padding: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--main-lite-color);
+  text-align: center;
+  text-transform: uppercase;
+  bottom: 0;
+  left: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
 /* ================WHAT WE DO============= */
 
 /* ================TEAM============= */
@@ -487,17 +507,11 @@ body {
 
 .footer-social-link-icon {
   fill: var(--main-lite-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
-}
-
-.footer-social-link:hover .footer-social-link-icon,
-.footer-social-link:focus .footer-social-link-icon {
-  fill: var(--main-lite-color);
 }
 
 /* ================END FOOTER============= */
@@ -563,6 +577,35 @@ body {
 .portfolio-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-overlay_container {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio_overlay {
+  position: absolute;
+  height: 294px;
+  left: 0;
+  top: 0;
+  transform: translateY(294px);
+  transition: transform 250ms;
+  background: rgba(33, 150, 243, 0.9);
+  width: 370px;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  vertical-align: top;
+  letter-spacing: 0.03em;
+  color: var(--main-lite-color);
+  overflow: auto;
+  /* overflow: hidden; */
+}
+
+.portfolio-item-link:hover .portfolio_overlay,
+.portfolio-item-link:focus .portfolio_overlay {
+  transform: translateY(0);
 }
 
 .portfolio-subtitle-wrapper {
