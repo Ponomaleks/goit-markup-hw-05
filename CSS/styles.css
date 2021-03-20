@@ -179,7 +179,8 @@ body {
   transition: transform 250ms;
 }
 
-.navigation-link:hover::after {
+.navigation-link:hover::after,
+.navigation-link:focus::after {
   transform: scaleX(1);
 }
 
@@ -660,4 +661,53 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-color);
 }
-/* ================END PORTFOLIO============= */ ;
+/* ================END PORTFOLIO============= */
+
+/* ================MODAL BTN============= */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: all 250ms linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: var(--main-lite-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close_modal-btn_button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: var(--main-lite-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  top: 8px;
+  right: 8px;
+}
+
+/* ================END MODAL BTN============= */ ;
