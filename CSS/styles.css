@@ -336,9 +336,12 @@ body {
 }
 
 .we-do_decription {
+  display: flex;
   position: absolute;
   width: 100%;
-  padding: 27px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
